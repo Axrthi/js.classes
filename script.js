@@ -1,21 +1,36 @@
 const obj={
-    firstname:"Aarthi",
-    lastname:"N",
-    age:19,
-    graduated:false,
-    joining_date:new Date("11/08/2025"),
-    number_of_days:()=>{
-        let curr=new Date()
-        return curr-obj.joining_date
+    firstname:"pratheesha",
+    mark:80,
+}
+
+class Person{
+    // firstname;
+    // mark;
+    constructor(firstname,mark){
+        this.firstname=firstname;
+        this.mark=mark;
     }
 }
-console.log(obj)
 
+const obj2=new Person("aarthi",100)   
+console.log(obj2.firstname)
 
+//forEach
+const arr=[5,3,6,9,12,14,16,345,56,346]
+//arr.forEach((x)=>{console.log(x)})
 
-let{firstname,lastname,age,graduated,joining_date,number_of_days}=obj
-console.log(
-    Math.floor(number_of_days()/(1000*3600*24))
-)
+//filter
+//let filteredArr=arr.filter((x)=>x%2==0)
+//console.log(filteredArr)
 
+//reduce
+//let sum=arr.reduce((acc,val)=>{ if(val%2!=0)return acc+val; return acc})
+//console.log(sum)
 
+//slice
+//let copyArr=arr.slice(2,4)
+//console.log(copyArr)
+
+//splice
+arr.splice(2,4)
+console.log(arr)
