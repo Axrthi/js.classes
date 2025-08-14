@@ -1,0 +1,33 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h2>Word and character counter</h2>
+        <textarea id="text"></textarea>
+        <div id="res">
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+//script
+let result=document.getElementById("res")
+function handleBox(){
+    let para=document.getElementById("text").value
+    let wordCount=para.split(" ").length
+    let charCount=para.split("").length
+    
+    result.innerHTML=`<h1>Total Word count:${wordCount}</h1>
+                     <h1>Total character count:${charCount}</h1>`
+
+}
+document.addEventListener("keyup",handleBox)
